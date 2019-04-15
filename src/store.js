@@ -2,6 +2,7 @@ import { createStore } from 'redux'
 
 const reducer = () => { }
 
-export const Store = createStore(reducer)
+export const store = createStore(reducer)
 
-console.log(Store)
+console.log(store)
+console.log(store.getState())
