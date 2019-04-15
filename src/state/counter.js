@@ -13,7 +13,7 @@ const initialState = {
     number: 0,
 }
 
-export const reducer = (state = initialState, action) => {
+export default (state = initialState, action) => {
     console.log(state, action)
 
     if (action.type === INC) {
