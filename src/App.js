@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './store'
+import { store } from './store'
 import { sendActionCreator } from './state/messages'
 
 class App extends React.Component {
@@ -19,6 +19,13 @@ class App extends React.Component {
     })
   }
 
+  sendMessages = () => {
+    this.state.messages.forEach(
+      message => store.dispatch(message)
+    )
+    this.setState({ messages: [] })
+  }
+
 
   render() {
     return (
@@ -29,7 +36,7 @@ class App extends React.Component {
           PREPARE MESSAGE
         </button>
         <button
-          onClick={this.sendMessage}
+          onClick={this.sendMessages}
         >
           SEND MESSAGE
         </button>
