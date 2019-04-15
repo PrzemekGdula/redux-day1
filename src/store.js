@@ -1,6 +1,12 @@
 import { createStore } from 'redux'
 
-const reducer = () => { }
+const reducer = (state, action) => {
+    console.log(state, action)
+
+    return {
+        number: 0,
+    }
+}
 
 export const store = createStore(reducer)
 
